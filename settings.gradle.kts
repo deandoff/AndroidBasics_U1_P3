@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Happy Birthday"
 include(":app")
- 
+include(":composebasics")
