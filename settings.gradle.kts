@@ -23,3 +23,4 @@ rootProject.name = "Happy Birthday"
 include(":app")
 include(":composebasics")
 include(":taskmanager")
+include(":composequadrant")
