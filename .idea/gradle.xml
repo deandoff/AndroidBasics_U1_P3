@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/diceroller" />
             <option value="$PROJECT_DIR$/lemonade" />
             <option value="$PROJECT_DIR$/taskmanager" />
+            <option value="$PROJECT_DIR$/topics" />
           </set>
         </option>
       </GradleProjectSettings>
