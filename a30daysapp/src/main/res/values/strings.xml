@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Productivity and Focus</string>
+
+    <string name="title1">Define Your Why</string>
+    <string name="tip1">Clarity fuels motivation. Write down why productivity matters to you — your deeper reason behind your goals.</string>
+
+    <string name="title2">Set 3 Key Priorities</string>
+    <string name="tip2">Each morning, pick the three most important tasks. Focus on finishing those before anything else.</string>
+
+    <string name="title3">Declutter Your Workspace</string>
+    <string name="tip3">A clear desk equals a clear mind. Remove distractions and organize your space for focus.</string>
+
+    <string name="title4">Turn Off Notifications</string>
+    <string name="tip4">Silence non-essential notifications for 24 hours and notice how your concentration improves.</string>
+
+    <string name="title5">Use Time Blocks</string>
+    <string name="tip5">Work in dedicated focus blocks (like 50 minutes work, 10 minutes rest). Protect those blocks fiercely.</string>
+
+    <string name="title6">Track Your Time</string>
+    <string name="tip6">Use a simple app or notebook to log how you spend your day. Awareness is the first step to change.</string>
+
+    <string name="title7">Reflect and Reset</string>
+    <string name="tip7">Review your first week. What boosted your focus most? Plan to repeat that next week.</string>
+
+    <string name="title8">Identify Your Peak Hours</string>
+    <string name="tip8">Notice when you have the most mental energy and schedule demanding tasks then.</string>
+
+    <string name="title9">Take Smart Breaks</string>
+    <string name="tip9">Don’t power through fatigue — take short, purposeful breaks to recharge.</string>
+
+    <string name="title10">Move Every Hour</string>
+    <string name="tip10">A quick stretch or walk keeps your body energized and your brain sharp.</string>
+
+    <string name="title11">Eat for Energy</string>
+    <string name="tip11">Choose brain foods — nuts, fruit, water, whole grains — over sugar or heavy meals.</string>
+
+    <string name="title12">Prioritize Sleep</string>
+    <string name="tip12">Productivity starts the night before. Aim for 7–8 hours of quality sleep.</string>
+
+    <string name="title13">Try a Digital Detox</string>
+    <string name="tip13">Spend one evening fully offline. Reconnect with rest and clarity.</string>
+
+    <string name="title14">Sunday Reset Ritual</string>
+    <string name="tip14">Plan your week, clean your workspace, and outline key goals before Monday hits.</string>
+
+    <string name="title15">Plan Tomorrow Tonight</string>
+    <string name="tip15">Each evening, list your top 3 tasks for tomorrow. It sets a powerful tone for your day.</string>
+
+    <string name="title16">Batch Similar Tasks</string>
+    <string name="tip16">Group emails, calls, or errands together to reduce mental switching.</string>
+
+    <string name="title17">Use the 2-Minute Rule</string>
+    <string name="tip17">If it takes less than 2 minutes, do it now. It prevents small tasks from piling up.</string>
+
+    <string name="title18">Automate One Thing</string>
+    <string name="tip18">Use tools or shortcuts to save repetitive effort — scheduling, bills, or reminders.</string>
+
+    <string name="title19">Simplify Your To-Do List</string>
+    <string name="tip19">Focus on outcomes, not busyness. Ask yourself: “What really moves the needle?”</string>
+
+    <string name="title20">Set Boundaries</string>
+    <string name="tip20">Say “no” to distractions or tasks that don’t align with your priorities.</string>
+
+    <string name="title21">Review and Recommit</string>
+    <string name="tip21">Reflect on what’s working and adjust your systems for even smoother days.</string>
+
+    <string name="title22">Try the Pomodoro Technique</string>
+    <string name="tip22">Work 25 minutes, rest 5. After 4 rounds, take a longer break to recharge.</string>
+
+    <string name="title23">Limit Multitasking</string>
+    <string name="tip23">Focus on one task at a time — your brain performs best that way.</string>
+
+    <string name="title24">Reduce Decision Fatigue</string>
+    <string name="tip24">Simplify routines — same breakfast, same start time — to save mental energy.</string>
+
+    <string name="title25">Protect Focus Hours</string>
+    <string name="tip25">Pick 2–3 hours of deep work each day. No meetings, no phone, just flow.</string>
+
+    <string name="title26">Review Your Goals</string>
+    <string name="tip26">Are you still on track with your “why”? Adjust if needed — productivity evolves.</string>
+
+    <string name="title27">Celebrate Small Wins</string>
+    <string name="tip27">Acknowledge your progress. Momentum grows from recognition.</string>
+
+    <string name="title28">Teach What You’ve Learned</string>
+    <string name="tip28">Share your productivity insights with someone else — it reinforces your habits.</string>
+
+    <string name="title29">Plan a Digital Sabbath</string>
+    <string name="tip29">Spend a full day unplugged. Let your brain reset and creativity refill.</string>
+
+    <string name="title30">Design Your Next Month</string>
+    <string name="tip30">Decide which habits to keep, which to drop, and how you’ll keep improving.</string>
+</resources>
