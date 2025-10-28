@@ -13,6 +13,7 @@ adsMobileSdk = "0.21.0-beta01"
 composeMaterial = "1.5.3"
 navigation = "2.7.7"
 lifecycle = "2.7.0"
+lifecycle_version = "2.7.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
