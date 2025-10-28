@@ -5,25 +5,38 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
+import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.example.mycity.ui.CategoryScreen
+import com.example.mycity.ui.CityScreen
+import com.example.mycity.ui.DetailScreen
+import com.example.mycity.ui.ExpandedCityScreen
 import com.example.mycity.ui.theme.HappyBirthdayTheme
+import com.example.mycity.ui.util.CityAppState
+import com.example.mycity.ui.util.CityContentType
+import com.example.mycity.ui.util.rememberCityAppState
 
 class MainActivity : ComponentActivity() {
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             HappyBirthdayTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    val windowSize = calculateWindowSizeClass(this)
+                    CityApp(windowSize = windowSize.widthSizeClass)
                 }
             }
         }
@@ -31,17 +44,53 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun CityApp(windowSize: WindowWidthSizeClass) {
+    val contentType = when (windowSize) {
+        WindowWidthSizeClass.Expanded -> CityContentType.LIST_AND_DETAIL
+        else -> CityContentType.LIST_ONLY
+    }
+
+    val appState = rememberCityAppState(contentType)
+
+    if (contentType == CityContentType.LIST_AND_DETAIL) {
+        ExpandedCityScreen(appState = appState)
+    } else {
+        CompactCityApp(appState = appState)
+    }
 }
 
-@Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    HappyBirthdayTheme {
-        Greeting("Android")
+fun CompactCityApp(appState: CityAppState) {
+    val navController = rememberNavController()
+
+    NavHost(
+        navController = navController,
+        startDestination = "city"
+    ) {
+        composable("city") {
+            CityScreen(
+                navController = navController,
+                onCategorySelected = { category ->
+                    appState.selectCategory(category)
+                }
+            )
+        }
+        composable("category/{categoryName}") { backStackEntry ->
+            val categoryName = backStackEntry.arguments?.getString("categoryName") ?: ""
+            CategoryScreen(
+                navController = navController,
+                categoryName = categoryName,
+                onPlaceSelected = { place ->
+                    appState.selectPlace(place)
+                }
+            )
+        }
+        composable("detail/{placeId}") { backStackEntry ->
+            val placeId = backStackEntry.arguments?.getString("placeId")?.toIntOrNull() ?: 0
+            DetailScreen(
+                navController = navController,
+                placeId = placeId
+            )
+        }
     }
 }
