@@ -119,15 +119,10 @@ fun ReplyListAndDetailContent(
         val activity = LocalContext.current as Activity
         ReplyDetailsScreen(
             replyUiState = replyUiState,
-            modifier = Modifier.weight(1f),
-            onBackPressed = { activity.finish() }
-        )
-        ReplyDetailsScreen(
-            replyUiState = replyUiState,
             modifier = Modifier
-                .padding(top = dimensionResource(R.dimen.email_list_item_vertical_spacing))
-                .weight(1f),
-            onBackPressed = {}
+                .weight(1f)
+                .padding(end = dimensionResource(R.dimen.email_list_only_horizontal_padding)),
+            onBackPressed = { activity.finish() }
         )
     }
 }
@@ -143,10 +138,11 @@ fun ReplyEmailListItem(
     Card(
         modifier = modifier,
         colors = CardDefaults.cardColors(
-            containerColor = if (selected)
+            containerColor = if (selected) {
                 MaterialTheme.colorScheme.primaryContainer
-            else
+            } else {
                 MaterialTheme.colorScheme.secondaryContainer
+            }
         ),
         onClick = onCardClick
     ) {
